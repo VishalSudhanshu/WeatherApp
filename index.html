@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather Web</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>WEATHER WEB</h1>
+
+    <div class="toggle-container">
+      <input type="checkbox" id="check">
+      <label for="check" class="toggle-button"></label>
+    </div>
+
+    <div class="tab-container">
+      <p class="tab" data-userWeather>Your Weather</p>
+      <p class="tab" data-searchWeather>Search Weather</p>
+    </div>
+
+    <div class="weather-container">
+      <!-- Access Location -->
+      <div class="sub-container access-location">
+        <img src="./assets/location3.png" height="150px" loading="lazy" alt="Location">
+        <p>Grant Location Access</p>
+        <p>Allow Access To Get Weather Information</p>
+        <button class="access-btn" data-grantAccess>Grant Access</button>
+      </div>
+
+      <!-- Search Option -->
+      <form class="search-container" data-searchForm>
+        <input class="search-box" type="text" placeholder="Seach city here..." data-searchInput>
+        <button class="search-btn" type="submit">
+          <img src="./assets/search2.png" height="20" loading="lazy" alt="search.png">
+        </button>
+      </form>
+
+      <!-- Loading Screen Container -->
+      <div class="sub-container loading-container">
+        <img src="./assets/loading3.gif" height="150px" alt="loading.png">
+        <p>Loading...</p>
+      </div>
+
+      <!-- Display Weather -->
+      <div class="sub-container weather-info">
+
+        <!-- User's Location -->
+        <div class="location-info">
+          <p data-cityInfo></p>
+          <img data-countryInfo>
+        </div>
+
+        <!-- Weather Discription -->
+        <p data-weatherDisc></p>
+
+        <!-- Weather Icon -->
+        <img data-weatherIcon>
+
+        <!-- Temprature -->
+        <p data-temp></p>
+
+        <div class="parameters-container">
+          <!-- Card 1 -->
+          <div class="parameter">
+            <img src="./assets/wind.png" height="40px" alt="wind.png">
+            <p>WINDSPEED</p>
+            <p data-windInfo></p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="parameter">
+            <img src="./assets/humidity.png" height="40px" alt="humidity.png">
+            <p>HUMIDITY</p>
+            <p data-humidityInfo></p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="parameter">
+            <img src="./assets/cloud.png" height="40px" alt="cloud.png">
+            <p>CLOUDS</p>
+            <p data-cloudInfo></p>
+          </div>
+        </div>
+
+        <div class="parameters-container2">
+          <!-- Card 4 -->
+          <div class="parameter sun">
+            <img src="./assets/sunrise.png" height="40px" alt="sunrise.png">
+            <p>SUNRISE</p>
+            <p data-sunriseInfo></p>
+          </div>
+          <!-- Card 5 -->
+          <div class="parameter sun">
+            <img src="./assets/sunset.png" height="40px" alt="sunset.png">
+            <p>SUNSET</p>
+            <p data-sunsetInfo></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="error-container">
+      <img src="./assets/404.png" alt="Not Found">
+      <p data-errorInfo></p>
+    </div>
+
+    <footer>
+      <div class="credit">
+        <p>This website is a <span>College Project</span></p>
+        <p>Made by <span>Vishal Sudhanshu</span></p>
+        <p>Semester <span>6<sup>th</sup></span></p>
+        <p>Branch <span>C S E</span></p>
+        <p><span>WCTM</span></p>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
